@@ -719,6 +719,165 @@ input[type=file]::file-selector-button:hover {
   --tw-shadow-colored: 0 0 #0000;
 }
 
+.btn-default {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.1;
+  background-color: rgb(113 113 122 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.05;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+}
+
+.btn-default:hover {
+  --tw-bg-opacity: 0.2;
+}
+
+.btn-primary {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(13 148 136 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+  --tw-gradient-from: #0f766e;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(15 118 110 / 0));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+}
+
+.btn-primary:hover {
+  --tw-gradient-from: transparent;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.main-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.main-title {
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title::before {
+  content: "";
+  margin-bottom: 0.25rem;
+  display: block;
+  height: 0.5rem;
+  width: 3rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
+}
+
+.bold {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(45 212 191 / var(--tw-text-opacity));
+}
+
+.lead {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity));
+}
+
+.project-technology-badge {
+  border-radius: 0.25rem;
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+  --tw-gradient-from: #27272a;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(39 39 42 / 0));
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
+  --tw-ring-opacity: 0.2;
+}
+
+.technology-brand {
+  z-index: 10;
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  font-size: 2.25rem;
+  line-height: 1;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.technology-brand:hover {
+  z-index: 20;
+  --tw-translate-y: -0.5rem;
+  transform: var(--tw-transform);
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -768,6 +927,10 @@ input[type=file]::file-selector-button:hover {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mb-1 {
@@ -866,6 +1029,10 @@ input[type=file]::file-selector-button:hover {
   gap: 0.5rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -880,6 +1047,12 @@ input[type=file]::file-selector-button:hover {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
 .divide-white > :not([hidden]) ~ :not([hidden]) {
@@ -944,8 +1117,53 @@ input[type=file]::file-selector-button:hover {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#ff5733\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 87 51 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#379ad6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 154 214 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#efd81d\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 216 29 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#7952b3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(121 82 179 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#161d2d\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 29 45 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#222222\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 34 34 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#cf649a\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 100 154 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0369a1\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 105 161 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-5 {
   --tw-bg-opacity: 0.05;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-8 {
@@ -975,6 +1193,18 @@ input[type=file]::file-selector-button:hover {
   font-family: Poppins, sans-serif;
 }
 
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -999,6 +1229,16 @@ input[type=file]::file-selector-button:hover {
   color: rgb(45 212 191 / var(--tw-text-opacity));
 }
 
+.text-\[\#f0931c\] {
+  --tw-text-opacity: 1;
+  color: rgb(240 147 28 / var(--tw-text-opacity));
+}
+
+.text-\[\#61dafb\] {
+  --tw-text-opacity: 1;
+  color: rgb(97 218 251 / var(--tw-text-opacity));
+}
+
 .text-zinc-600 {
   --tw-text-opacity: 1;
   color: rgb(82 82 91 / var(--tw-text-opacity));
@@ -1007,6 +1247,16 @@ input[type=file]::file-selector-button:hover {
 .text-zinc-500 {
   --tw-text-opacity: 1;
   color: rgb(113 113 122 / var(--tw-text-opacity));
+}
+
+.text-primary-500 {
+  --tw-text-opacity: 1;
+  color: rgb(244 63 94 / var(--tw-text-opacity));
+}
+
+.text-primary-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity));
 }
 
 .shadow {
@@ -1020,125 +1270,10 @@ input[type=file]::file-selector-button:hover {
     40px 40px rgba(244, 63, 94, 0.5);
 }
 
-.lead {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --tw-text-opacity: 1;
-  color: rgb(161 161 170 / var(--tw-text-opacity));
-}
-
-.btn-default {
-  border-radius: 0.25rem;
-  border-width: 1px;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  --tw-border-opacity: 0.1;
-  background-color: rgb(113 113 122 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.05;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(212 212 216 / var(--tw-text-opacity));
-  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 75ms;
-}
-
-.btn-default:hover {
-  --tw-bg-opacity: 0.2;
-}
-
-.btn-primary {
-  border-radius: 0.25rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(13 148 136 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
-  --tw-gradient-from: #0f766e;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(15 118 110 / 0));
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 75ms;
-}
-
-.btn-primary:hover {
-  --tw-gradient-from: transparent;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
-}
-
-.main-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-  .main-title {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-
-.main-title {
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
-}
-
-.title {
-  margin-bottom: 0.5rem;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.bold {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(45 212 191 / var(--tw-text-opacity));
-}
-
-.title::before {
+/* .title-secondary::before {
   content: "";
-  margin-bottom: 0.25rem;
-  display: block;
-  height: 0.5rem;
-  width: 3rem;
-  border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
-}
-
-.title-secondary::before {
-  content: "";
-  margin-bottom: 0.25rem;
-  display: block;
-  height: 0.5rem;
-  width: 3rem;
-  border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
-}
+  @apply block w-12 h-2 bg-secondary-500 rounded-full mb-1;
+} */
 
 .tab-buttons {
   position: absolute;
@@ -1180,111 +1315,15 @@ input[type=file]::file-selector-button:hover {
   color: rgb(20 184 166 / var(--tw-text-opacity));
 }
 
-.text-shadow {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
 .technology-list {
   margin-top: 0.5rem;
   display: flex;
 }
 
-.technology-list li {
-  display: flex;
-  height: 2.75rem;
-  width: 2.75rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-  font-size: 2.25rem;
-  line-height: 1;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
-  transition: 0.2s ease-in-out transform;
-}
-
-.technology-list li:nth-of-type(2) {
-  transform: translateX(-10px);
-}
-
-.technology-list li:nth-of-type(3) {
-  transform: translateX(-20px);
-}
-
-.technology-list li:nth-of-type(4) {
-  transform: translateX(-30px);
-}
-
-.technology-list li:hover {
-  z-index: 1;
-  transform: translateY(-8px);
-}
-
-.technology-list li:nth-of-type(2):hover {
-  transform: translate(-10px, -8px);
-}
-
-.technology-list li:nth-of-type(3):hover {
-  transform: translateX(-20px) translateY(-8px);
-}
-
-.technology-list li:nth-of-type(4):hover {
-  transform: translateX(-30px) translateY(-8px);
-}
-
-li.html-brand {
-  background-color: #ff5733;
-  color: white;
-}
-
-li.html-brand i {
-  transform: translateY(1px);
-}
-
-li.css-brand {
-  font-size: 30px;
-  background-color: #379ad6;
-  color: white;
-}
-
-li.css-brand i {
-  transform: translate(1px, 1px);
-}
-
-li.js-brand {
-  background-color: #efd81d;
-}
-
-li.sass-brand {
-  background-color: #cf649a;
-  font-size: 28px;
-}
-
-li.sass-brand i {
-  transform: translateY(2px);
-}
-
-li.bootstrap-brand {
-  background-color: #7952b3;
-  font-size: 30px;
-}
-
-li.tailwind-brand {
-  background-color: #161d2d;
-}
-
-li.react-brand {
-  background-color: #222222;
-  color: #61dafb;
-}
-
-li.java-brand {
-  color: #f0931c;
-}
-
-li.php-brand {
-  font-size: 30px;
-  background-color: #0369a1;
+.technology-list > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(-0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(-0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 [data-tooltip-style^='light'] + .tooltip-technology > .tooltip-arrow:before {
@@ -1400,41 +1439,41 @@ li.php-brand {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.link:hover,
-.link:hover p {
-  text-decoration: underline;
+.project-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.project-list li {
-  display: flex;
-  gap: 1rem;
+@media (min-width: 1024px) {
+  .project-list > li {
+    flex-direction: row;
+  }
 }
 
 .project-title {
   display: flex;
+  min-width: 210px;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.project-technology-badge {
-  border-radius: 0.25rem;
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
-  --tw-gradient-from: #27272a;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(39 39 42 / 0));
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.before\:bg-secondary-400::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 212 191 / var(--tw-bg-opacity));
+}
+
+.hover\:text-secondary-400:hover {
   --tw-text-opacity: 1;
-  color: rgb(212 212 216 / var(--tw-text-opacity));
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
-  --tw-ring-opacity: 0.2;
+  color: rgb(45 212 191 / var(--tw-text-opacity));
+}
+
+.hover\:text-primary-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
