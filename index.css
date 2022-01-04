@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image-profile {
+  box-shadow: -40px -40px rgba(20, 184, 166, 0.5),
+    40px 40px rgba(244, 63, 94, 0.5);
+}
+
+.lead {
+  @apply text-zinc-400 font-sans;
+}
+
+.btn-default {
+  @apply px-3 py-1.5 rounded bg-zinc-500 bg-opacity-5 border border-white border-opacity-10
+  font-sans text-sm text-zinc-300
+  hover:bg-opacity-20 transition-colors duration-75;
+}
+
+.btn-primary {
+  @apply px-3 py-1.5 rounded bg-secondary-500 bg-gradient-to-t from-secondary-700 font-sans text-white shadow-lg
+  border border-secondary-600
+  hover:from-transparent transition-colors duration-75;
+}
+
+.main-title {
+  @apply text-4xl md:text-5xl leading-normal font-bold;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  @apply text-3xl font-bold mb-2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bold {
+  @apply font-bold text-secondary-400 text-lg;
+}
+
+.title::before {
+  content: "";
+  @apply block w-12 h-2 bg-primary-500 rounded-full mb-1;
+}
+.title-secondary::before {
+  content: "";
+  @apply block w-12 h-2 bg-secondary-500 rounded-full mb-1;
+}
+
+.tab-buttons {
+  @apply inline-flex absolute right-6;
+}
+
+.tab-buttons button {
+  @apply py-2 px-3 bg-white bg-opacity-5  border border-white border-opacity-5
+  shadow-md cursor-pointer
+  hover:bg-opacity-10;
+}
+
+.tab-buttons button:first-child.active {
+  @apply text-primary-500 border-primary-500 border-opacity-50;
+}
+
+.tab-buttons button:last-child.active {
+  @apply text-secondary-500 border-secondary-500 border-opacity-50;
+}
+
+.text-shadow {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.technology-list {
+  @apply flex mt-2;
+}
+
+.technology-list li {
+  @apply text-4xl p-1 w-11 h-11 flex items-center justify-center rounded leading-none;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease-in-out transform;
+}
+
+.technology-list li:nth-of-type(2) {
+  transform: translateX(-10px);
+}
+.technology-list li:nth-of-type(3) {
+  transform: translateX(-20px);
+}
+.technology-list li:nth-of-type(4) {
+  transform: translateX(-30px);
+}
+
+.technology-list li:hover {
+  z-index: 1;
+  transform: translateY(-8px);
+}
+.technology-list li:nth-of-type(2):hover {
+  transform: translate(-10px, -8px);
+}
+.technology-list li:nth-of-type(3):hover {
+  transform: translateX(-20px) translateY(-8px);
+}
+.technology-list li:nth-of-type(4):hover {
+  transform: translateX(-30px) translateY(-8px);
+}
+
+li.html-brand {
+  background-color: #ff5733;
+  color: white;
+}
+li.html-brand i {
+  transform: translateY(1px);
+}
+
+li.css-brand {
+  font-size: 30px;
+  background-color: #379ad6;
+  color: white;
+}
+li.css-brand i {
+  transform: translate(1px, 1px);
+}
+
+li.js-brand {
+  background-color: #efd81d;
+}
+
+li.sass-brand {
+  background-color: #cf649a;
+  font-size: 28px;
+}
+li.sass-brand i {
+  transform: translateY(2px);
+}
+
+li.bootstrap-brand {
+  background-color: #7952b3;
+  font-size: 30px;
+}
+
+li.tailwind-brand {
+  background-color: #161d2d;
+}
+
+li.react-brand {
+  background-color: #222222;
+  color: #61dafb;
+}
+
+li.java-brand {
+  color: #f0931c;
+}
+
+li.php-brand {
+  font-size: 30px;
+  background-color: #0369a1;
+}
+
+.tooltip-technology {
+  @apply inline-block absolute invisible z-10 py-2 px-3 text-sm text-white bg-body rounded-lg shadow-sm opacity-0 tooltip
+  border border-white border-opacity-10 font-sans;
+}
+
+.knowledge-list {
+  @apply flex flex-col lg:flex-row gap-x-4 gap-y-8 justify-center items-start text-center;
+}
+
+.knowledge-list > section {
+  @apply w-full lg:w-1/2;
+}
+
+.knowledge-list > section > p {
+  @apply pb-1 mb-2 border-b border-opacity-20;
+}
+
+.knowledge-list li {
+  @apply font-sans;
+}
+
+.link:hover,
+.link:hover p {
+  text-decoration: underline;
+}
+
+.project-list li {
+  @apply flex gap-4;
+}
+
+.project-title {
+  @apply flex flex-col gap-2;
+}
+
+.project-technology-badge {
+  @apply bg-gradient-to-t from-zinc-800 ring-1 ring-gray-500 ring-opacity-20 shadow-md
+  px-1.5 rounded font-sans text-sm text-zinc-300;
+}
