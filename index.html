@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,71 +18,94 @@
   <!-- flowbite tailwindcss plugin -->
   <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="./favicon.png">
+
   <title>Brendon Gomes - Desenvolvedor</title>
 </head>
 <body class="bg-body text-white font-poppins">
 
   <!-- header -->
-  <header class="py-6">
-    <div class="grid justify-end px-8 w-full max-w-7xl">
+  <header class="fixed w-screen top-0 left-0 z-50 flex items-center justify-center glassmorphism-5 bg-zinc-800 bg-opacity-95">
+    <div class="flex flex-col sm:flex-row items-end justify-end pl-2 pr-10 py-3 w-full max-w-7xl">
 
-      <!-- navbar -->
-      <nav class="hidden sm:flex space-x-8 items-center">
-        <a href="#" class="text-primary-300">Sobre mim</a>
-        <a href="#">Tecnologias & Conhecimentos</a>
-        <a href="#">Projetos</a>
-      </nav>
-
-      
-      
-      <!-- nav icon -->
-      <div class="sm:hidden btn-icon rounded-lg">
+      <!-- mobile button -->
+      <button type="button" data-collapse-toggle="mobile-menu" aria-expanded="false"
+        class="nav-item sm:hidden rounded-md p-2 cursor-pointer ring-0 ring-white ring-opacity-40 focus:ring-2 w-min"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
         </svg>
-      </div>
+      </button>
+
+      <!-- navbar -->
+      <nav class="w-full font-bold hidden sm:block sm:w-auto" id="mobile-menu">
+        <ul class="flex flex-col mt-2 sm:flex-row sm:mt-0 sm:gap-2 divide-y divide-black divide-opacity-40 sm:divide-y-0">
+          <li>
+            <a href="#home" class="nav-item rounded-t sm:rounded">Home</a>
+          </li>
+          <li>
+            <a href="#technologies-knowledge" class="nav-item sm:rounded">Tecnologias & Conhecimento</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-item rounded-b sm:rounded">Projetos</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- <nav class="hidden sm:flex space-x-8 items-center font-bold">
+      </nav> -->
 
     </div>
   </header>
 
-  <main class="px-2 md:px-8 w-full max-w-6xl mt-16 flex flex-col justify-between items-center mx-auto">
+  <main class="px-2 md:px-8 w-full max-w-6xl mt-20 flex flex-col justify-between items-center mx-auto">
 
     <!-- Hero section -->
-    <section class="flex flex-col lg:flex-row mx-auto items-center justify-evenly w-full">
-      <div class="max-w-xl">
+    <section id="home" class="flex flex-col items-center sm:block mx-auto my-24 mb-20 max-w-5xl w-full">
+      <div class="z-10">
         <h2 class="main-title">
           Olá, sou Brendon, um
           <span class="text-secondary-400">Desenvolvedor Web</span>
         </h2>
-        <p class="mt-2 lead">
+        <p class="mt-2 lead max-w-xl">
           Estudante de Escola Técnica de São Paulo, estou sempre procurando aprender
           novas tecnologias desse universo da programação
         </p>
-        <button class="btn-primary rounded-md mt-4 flex items-center gap-2">
+
+        <a href="#contact" class="btn btn-secondary-title rounded-md mt-4 flex items-center gap-2 w-max">
           Meu contato 
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
             <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
           </svg>
-        </button>
+        </a>
       </div>
-      <div class="my-16">
-        <img src="./img/profile.png" alt="Brendon Gomes - Desenvolvedor Web"
-          class="rounded-full w-64 relative image-profile"
+
+      <div class="sm:absolute max-w-screen-sm h-full right-0 top-80 lg:top-20">
+        <img src="./img/main-image.png" alt="Imagem de um foguete"
+          class="animate-pulses sm:min-w-[500px] w-96  "
         >
       </div>
     </section>
 
-
     <!-- Technologies and Knowledge section -->
-    <section class="max-w-5xl w-full p-8 mt-8 rounded-lg bg-white bg-opacity-5 relative border border-white border-opacity-5 shadow" >
+    <section id="technologies-knowledge" class="max-w-5xl w-full p-6 sm:p-8 mt-8 relative rounded-lg bg-zinc-800 bg-opacity-80 shadow glassmorphism-10" >
 
       <!-- Tab buttons -->
       <div class="tab-buttons" id="myTab" data-tabs-toggle="#tabContent" role="tablist">
-        
+        <!-- Knowledge tab button -->
+        <button class="rounded-l active" id="knowledge-tab" type="button" role="tab"
+          data-tabs-target="#knowledge" aria-controls="knowledge" aria-selected="true"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+          </svg>
+        </button>
+
         <!-- Technologies tab button -->
-        <button class="rounded-l active" id="technologies-tab" type="button" role="tab"
-          data-tabs-target="#technologies" aria-controls="technologies" aria-selected="true"
+        <button class="rounded-r" id="technologies-tab" type="button" role="tab"
+          data-tabs-target="#technologies" aria-controls="technologies" aria-selected="false"
         >
           
           <!-- need to add "pointer events none" class on the button to use the tab click  -->
@@ -90,172 +113,24 @@
             <path fill-rule="evenodd" d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z" clip-rule="evenodd" />
           </svg>
         </button>
-
-        <!-- Knowledge tab button -->
-        <button class="rounded-r" id="knowledge-tab" type="button" role="tab"
-          data-tabs-target="#knowledge" aria-controls="knowledge" aria-selected="false"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-          </svg>
-        </button>
-
       </div>
 
       <!-- Tab content  -->
       <div id="tabContent">
-        <!-- Technologies Tab Content -->
-        <section id="technologies" role="tabpanel" aria-labelledby="technologies-tab">
-          <h2 class="title">Tecnologias</h2>
-          <p class="lead mb-8 max-w-lg">Conheça algumas das linguagens e tecnologias da qual eu possuo conhecimento e experiência:</p>
-
-          <div class="flex flex-col md:flex-row justify-between md:divide-x divide-opacity-20 divide-white md:space-x-4 space-y-8 md:space-y-0">
-            <section class="md:py-4">
-              <h3>Tenho experiência</h3>
-    
-              <ul class="technology-list">
-                <li class="technology-brand bg-[#ff5733] text-white" data-tooltip-target="tooltip-html" data-tooltip-placement="top">
-                  <i class="fab fa-html5"></i>
-                </li>
-                <div id="tooltip-html" role="tooltip" class="tooltip-technology">
-                  HTML5
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-                <li class="technology-brand bg-[#379ad6] text-[30px] text-white"data-tooltip-target="tooltip-css" data-tooltip-placement="top">
-                  <i class="fab fa-css3"></i>
-                </li>
-                <div id="tooltip-css" role="tooltip" class="tooltip-technology">
-                  CSS3
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-                <li class="technology-brand bg-[#efd81d]" data-tooltip-target="tooltip-js" data-tooltip-placement="top">
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 1052.000000 1052.000000" preserveAspectRatio="xMidYMid meet">
-                    <g transform="translate(0.000000,1052.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                    <path d="M7840 5740 c-378 -30 -695 -166 -931 -400 -243 -241 -359 -535 -359 -908 0 -558 229 -948 740 -1257 130 -78 307 -163 613 -295 417 -179 572 -264 671 -370 122 -131 156 -340 79 -500 -15 -31 -54 -83 -89 -118 -118 -119 -304 -182 -535 -182 -390 0 -681 160 -915 506 -32 46 -61 84 -65 84 -9 0 -770 -439 -786 -454 -10 -9 -2 -30 37 -94 304 -512 779 -812 1421 -898 168 -23 483 -22 644 0 404 57 707 191 942 419 250 241 373 553 373 944 0 250 -41 445 -134 638 -64 132 -128 221 -238 333 -211 214 -484 376 -1029 610 -412 177 -550 253 -641 350 -87 93 -124 202 -116 338 7 108 37 181 103 252 95 103 205 146 375 145 193 0 318 -50 445 -178 45 -44 103 -115 130 -158 31 -49 54 -76 62 -73 26 11 753 481 753 488 0 4 -37 62 -82 130 -96 144 -269 324 -388 403 -220 146 -455 221 -765 244 -152 12 -172 12 -315 1z"/>
-                    <path d="M4727 3923 l-3 -1768 -22 -83 c-29 -109 -63 -174 -123 -234 -84 -84 -192 -119 -372 -120 -257 -1 -411 108 -590 414 -29 48 -55 87 -58 86 -4 -2 -185 -111 -402 -242 l-395 -240 30 -60 c179 -357 489 -627 862 -751 394 -131 900 -119 1271 30 445 180 706 552 775 1105 6 56 10 681 10 1857 l0 1773 -490 0 -489 0 -4 -1767z"/>
-                    </g>
-                  </svg>
-                </li>
-                <div id="tooltip-js" role="tooltip" class="tooltip-technology">
-                  Javascript
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-                <li class="technology-brand bg-body" data-tooltip-target="tooltip-sql" data-tooltip-placement="top">
-                  <img src="./img/icon/svg-brand.svg" alt="SQL Server">
-                </li>
-                <div id="tooltip-sql" role="tooltip" class="tooltip-technology">
-                  Microsoft SQL Server
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-              </ul>
-            </section>
-    
-            <section class="md:pl-5 md:py-4">
-              <h3>Estou estudando</h3>
-    
-              <ul class="technology-list">
-
-                <li class="technology-brand text-[#f0931c] bg-body" data-tooltip-target="tooltip-java" data-tooltip-placement="top">
-                  <i class="fab fa-java"></i>
-                </li>
-                <div id="tooltip-java" role="tooltip" class="tooltip-technology">
-                  Java
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-
-                <li class="technology-brand bg-[#7952b3] text-[30px]" data-tooltip-target="tooltip-bootstrap" data-tooltip-placement="top">
-                  <i class="fab fa-bootstrap"></i>
-                </li>
-                <div id="tooltip-bootstrap" role="tooltip" class="tooltip-technology">
-                  Bootstrap
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-
-                <li class="technology-brand bg-[#161d2d]"  data-tooltip-target="tooltip-tailwind" data-tooltip-placement="top">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
-                    <g clip-path="url(#prefix__clip0)">
-                      <path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd"/>
-                    </g><defs><clipPath id="prefix__clip0"><path fill="#fff" d="M0 0h54v32.4H0z"/></clipPath></defs>
-                  </svg>
-                </li>
-                <div id="tooltip-tailwind" role="tooltip" class="tooltip-technology">
-                  TailwindCSS
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-                <li class="technology-brand bg-[#222222] text-[#61dafb]"  data-tooltip-target="tooltip-react" data-tooltip-placement="top">
-                  <i class="fab fa-react"></i>
-                </li>
-                <div id="tooltip-react" role="tooltip" class="tooltip-technology">
-                  ReactJS
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-              </ul>
-    
-            </section>
-    
-            <section class="md:pl-5 md:py-4">
-              <h3>Tenho interesse em aprender</h3>
-    
-              <ul class="technology-list">
-
-                <li class="technology-brand bg-[#cf649a] text-[28px]" data-tooltip-target="tooltip-sass" data-tooltip-placement="top">
-                  <i class="fab fa-sass"></i>
-                </li>
-                <div id="tooltip-sass" role="tooltip" class="tooltip-technology">
-                  Sass
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-                <li class="technology-brand bg-[#0369a1] text-[30px]" data-tooltip-target="tooltip-php" data-tooltip-placement="top">
-                  <i class="fab fa-php"></i>
-                </li>
-                <div id="tooltip-php" role="tooltip" class="tooltip-technology">
-                  PHP
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-              </ul>
-            </section>
-          </div>
-        </section>
-
         <!-- Knowledge Tab Content -->
-        <section class="hidden" id="knowledge" role="tabpanel" aria-labelledby="knowledge-tab">
+        <section id="knowledge" role="tabpanel" aria-labelledby="knowledge-tab">
           <h2 class="title before:bg-secondary-400">Conhecimento</h2>
           <p class="lead mb-8 max-w-lg">Sobre minha formação e conhecimento de forma abrangente:</p>
 
           <div class="knowledge-list">
+
             <section>
-              <p class="bold mb-2 flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                </svg>
-                Formação acadêmica
-              </p>
-              <ul>
-                <li>
-                  Etec de Sapopemba - Desenvolvimento de Sistemas (cursando)
-                </li>
-              </ul>
-            </section>
-            
-            <section>
-              <p class="bold mb-2 flex justify-center items-center">
+              <h3 class="bold mb-2 flex justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                Linguagens e Frameworks que eu conheço
-              </p>
+                Linguagens e Frameworks
+              </h3>
 
               <ul>
                 <li>HTML5, CSS3, Javascript</li>
@@ -268,33 +143,155 @@
 
             </section>
 
-
-
-
+            <section>
+              <h3 class="bold mb-2 flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                </svg>
+                Formação acadêmica
+              </h3>
+              <ul>
+                <li>
+                  Etec de Sapopemba - Desenvolvimento de Sistemas
+                </li>
+              </ul>
+            </section>
           </div>
-
-
-
-        
         </section>
 
+        <!-- Technologies Tab Content -->
+        <section class="hidden" id="technologies" role="tabpanel" aria-labelledby="technologies-tab">
+          <h2 class="title">Tecnologias</h2>
+          <p class="lead mb-8 max-w-lg">Conheça algumas das linguagens e tecnologias da qual eu possuo conhecimento e experiência:</p>
+
+          <div class="flex flex-col md:flex-row justify-between md:divide-x divide-opacity-20 divide-white md:space-x-4 space-y-8 md:space-y-0">
+            <section class="md:py-4">
+              <h3>Tenho experiência</h3>
+    
+              <ul class="technology-list">
+                <li class="technology-brand bg-[#ff5733] text-white" data-tooltip-target="tooltip-html" data-tooltip-placement="top">
+                  <i class="fab fa-html5"></i>
+                  <div id="tooltip-html" role="tooltip" class="tooltip-technology">
+                    HTML5
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+
+                <li class="technology-brand bg-[#379ad6] text-[30px] text-white"data-tooltip-target="tooltip-css" data-tooltip-placement="top">
+                  <i class="fab fa-css3"></i>
+                  <div id="tooltip-css" role="tooltip" class="tooltip-technology">
+                    CSS3
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+
+                <li class="technology-brand bg-[#efd81d]" data-tooltip-target="tooltip-js" data-tooltip-placement="top">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 1052.000000 1052.000000" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,1052.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                    <path d="M7840 5740 c-378 -30 -695 -166 -931 -400 -243 -241 -359 -535 -359 -908 0 -558 229 -948 740 -1257 130 -78 307 -163 613 -295 417 -179 572 -264 671 -370 122 -131 156 -340 79 -500 -15 -31 -54 -83 -89 -118 -118 -119 -304 -182 -535 -182 -390 0 -681 160 -915 506 -32 46 -61 84 -65 84 -9 0 -770 -439 -786 -454 -10 -9 -2 -30 37 -94 304 -512 779 -812 1421 -898 168 -23 483 -22 644 0 404 57 707 191 942 419 250 241 373 553 373 944 0 250 -41 445 -134 638 -64 132 -128 221 -238 333 -211 214 -484 376 -1029 610 -412 177 -550 253 -641 350 -87 93 -124 202 -116 338 7 108 37 181 103 252 95 103 205 146 375 145 193 0 318 -50 445 -178 45 -44 103 -115 130 -158 31 -49 54 -76 62 -73 26 11 753 481 753 488 0 4 -37 62 -82 130 -96 144 -269 324 -388 403 -220 146 -455 221 -765 244 -152 12 -172 12 -315 1z"/>
+                    <path d="M4727 3923 l-3 -1768 -22 -83 c-29 -109 -63 -174 -123 -234 -84 -84 -192 -119 -372 -120 -257 -1 -411 108 -590 414 -29 48 -55 87 -58 86 -4 -2 -185 -111 -402 -242 l-395 -240 30 -60 c179 -357 489 -627 862 -751 394 -131 900 -119 1271 30 445 180 706 552 775 1105 6 56 10 681 10 1857 l0 1773 -490 0 -489 0 -4 -1767z"/>
+                    </g>
+                  </svg>
+                  <div id="tooltip-js" role="tooltip" class="tooltip-technology">
+                    Javascript
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+
+                <li class="technology-brand bg-body" data-tooltip-target="tooltip-sql" data-tooltip-placement="top">
+                  <img src="./img/icon/svg-brand.svg" alt="SQL Server">
+                  <div id="tooltip-sql" role="tooltip" class="tooltip-technology">
+                    Microsoft SQL Server
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+    
+            <section class="md:pl-5 md:py-4">
+              <h3>Estou estudando</h3>
+    
+              <ul class="technology-list">
+                <li class="technology-brand text-[#f0931c] bg-body" data-tooltip-target="tooltip-java" data-tooltip-placement="top">
+                  <i class="fab fa-java"></i>
+                  <div id="tooltip-java" role="tooltip" class="tooltip-technology">
+                    Java
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+
+                <li class="technology-brand bg-[#7952b3] text-[30px]" data-tooltip-target="tooltip-bootstrap" data-tooltip-placement="top">
+                  <i class="fab fa-bootstrap"></i>
+                  <div id="tooltip-bootstrap" role="tooltip" class="tooltip-technology">
+                    Bootstrap
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+
+
+                <li class="technology-brand bg-[#161d2d]"  data-tooltip-target="tooltip-tailwind" data-tooltip-placement="top">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
+                    <g clip-path="url(#prefix__clip0)">
+                      <path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd"/>
+                    </g><defs><clipPath id="prefix__clip0"><path fill="#fff" d="M0 0h54v32.4H0z"/></clipPath></defs>
+                  </svg>
+                  <div id="tooltip-tailwind" role="tooltip" class="tooltip-technology">
+                    TailwindCSS
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+
+                <li class="technology-brand bg-[#222222] text-[#61dafb]"  data-tooltip-target="tooltip-react" data-tooltip-placement="top">
+                  <i class="fab fa-react"></i>
+                  <div id="tooltip-react" role="tooltip" class="tooltip-technology">
+                    ReactJS
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+              </ul>
+    
+            </section>
+    
+            <section class="md:pl-5 md:py-4">
+              <h3>Tenho interesse em aprender</h3>
+    
+              <ul class="technology-list">
+                <li class="technology-brand bg-[#cf649a] text-[28px]" data-tooltip-target="tooltip-sass" data-tooltip-placement="top">
+                  <i class="fab fa-sass"></i>
+                  <div id="tooltip-sass" role="tooltip" class="tooltip-technology">
+                    Sass
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+
+                <li class="technology-brand bg-[#0369a1] text-[30px]" data-tooltip-target="tooltip-php" data-tooltip-placement="top">
+                  <i class="fab fa-php"></i>
+                  <div id="tooltip-php" role="tooltip" class="tooltip-technology">
+                    PHP
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
       </div>
 
-        
     </section>
 
+    <!-- Projects section -->
+    <section id="projects" class="max-w-5xl w-full p-2 md:p-8 mt-8">
+      <h2 class="title">Projetos que desenvolvi</h2>
 
-    <!-- projects section -->
-    <section class="max-w-5xl w-full p-8 mt-8">
-      <h2 class="title">Projetos recentes</h2>
-
-      <ul class="project-list mt-8 flex flex-col divide-y divide-white divide-opacity-20">
+      <ul class="project-list mt-8 flex flex-col gap-8 md:gap-4">
         <li>
           <img src="./img/project-01-culturame.png" alt="Projeto Cultura.me"
-            class="rounded-lg h-40 object-cover"
+            class="rounded-lg h-40 object-cover shadow"
           >
           <div class="project-title">
-            <h4 class="font-bold text-3xl">Cultura.me</h4>
+            <h4 class="font-bold text-2xl sm:text-3xl">Cultura.me</h4>
             <ul class="flex gap-1 mb-2;">
               <li class="project-technology-badge">HTML5</li>
               <li class="project-technology-badge">CSS3</li>
@@ -303,16 +300,23 @@
             <p class="text-zinc-600">Dezembro &bull; 2021</p>
           </div>
           <div class="flex flex-col gap-2">
-            <p class="lead text-white mt-1">
+            <p class="lead text-white">
               O Cultura.me é um website simples com a proposta de apresentar novos lugares turísticos e culturais do Brasil.
               Feito para estudo do Bootstrap
             </p>
             <div class="flex gap-2 ">
-              <a href="https://brendon3578.github.io/Cultura.me/index.html" target="_blank" class="btn-default hover:text-secondary-400">
+              <a href="https://brendon3578.github.io/Cultura.me/index.html" target="_blank" class="btn btn-default flex gap-1 hover:text-secondary-400">
                 Acessar site
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
               </a>
-              <a href="https://github.com/Brendon3578/Cultura.me" target="_blank" class="btn-default hover:text-primary-400">
+              <a href="https://github.com/Brendon3578/Cultura.me" target="_blank" class="btn btn-default flex gap-1 hover:text-primary-400">
                 Código Fonte
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                </svg>
               </a>
             </div>
           </div>
@@ -320,10 +324,10 @@
 
         <li>
           <img src="./img/project-02-deliveryit.png" alt="Projeto Delivery.it"
-            class="rounded-lg h-40 object-cover"
+            class="rounded-lg h-40 object-cover shadow"
           >
           <div class="project-title">
-            <h4 class="font-bold text-3xl">Delivery.It</h4>
+            <h4 class="font-bold text-2xl sm:text-3xl">Delivery.It</h4>
             <ul class="flex gap-1 mb-2;">
               <li class="project-technology-badge">ReactJS</li>
               <li class="project-technology-badge">TypeScript</li>
@@ -332,16 +336,23 @@
             <p class="text-zinc-600">Outubro &bull; 2021</p>
           </div>
           <div class="flex flex-col gap-2">
-            <p class="lead text-white mt-1">
+            <p class="lead text-white">
               Delivery.it é um pequeno projeto para a gestão de entregas de encomendas,
               feito com ReactJS e Typescript
             </p>
             <div class="flex gap-2 ">
-              <a href="https://delivery-it.herokuapp.com/" target="_blank" class="btn-default hover:text-secondary-400">
+              <a href="https://delivery-it.herokuapp.com/" target="_blank" class="btn btn-default flex gap-1 hover:text-secondary-400">
                 Acessar site
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
               </a>
-              <a href="https://github.com/Brendon3578/Delivery-It" target="_blank" class="btn-default hover:text-primary-400">
+              <a href="https://github.com/Brendon3578/Delivery-It" target="_blank" class="btn btn-default flex gap-1 hover:text-primary-400">
                 Código Fonte
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                </svg>
               </a>
             </div>
           </div>
@@ -349,10 +360,10 @@
 
         <li>
           <img src="./img/project-03-letmeask.png" alt="Projeto Letmeask"
-            class="rounded-lg h-40 object-cover"
+            class="rounded-lg h-40 object-cover shadow"
           >
           <div class="project-title">
-            <h4 class="font-bold text-3xl">Letmeask</h4>
+            <h4 class="font-bold text-2xl sm:text-3xl">Letmeask</h4>
             <ul class="flex gap-1 mb-2;">
               <li class="project-technology-badge">ReactJS</li>
               <li class="project-technology-badge">TypeScript</li>
@@ -361,23 +372,63 @@
             <p class="text-zinc-600">Setembro &bull; 2021</p>
           </div>
           <div class="flex flex-col gap-2">
-            <p class="lead text-white mt-1">
-              O projeto Letmeask é um app elaborado para criadores de conteúdos poderem criar salas de Q&A com o seu público
-              e poderem tirar dúvidas, de uma forma muito organizada e democrática.
-              Criado a partir do evento Next Level Week 6 dentro da trilha de ReactJS.
+            <p class="lead text-white">
+              O Letmeask é um app elaborado para criadores de conteúdos poderem criar salas de Q&A com o seu público
+              e poderem tirar dúvidas.
+              Criado a partir do evento NLW6 dentro da trilha de ReactJS.
             </p>
             <div class="flex gap-2 ">
-              <a href="https://letmeask-aafe8.web.app/" target="_blank" class="btn-default hover:text-secondary-400">
+              <a href="https://letmeask-aafe8.web.app/" target="_blank" class="btn btn-default flex gap-1 hover:text-secondary-400">
                 Acessar site
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
               </a>
-              <a href="https://github.com/Brendon3578/Letmeask" target="_blank" class="btn-default hover:text-primary-400">
+              <a href="https://github.com/Brendon3578/Letmeask" target="_blank" class="btn btn-default flex gap-1 hover:text-primary-400">
                 Código Fonte
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                </svg>
               </a>
             </div>
           </div>
         </li>
       </ul>
 
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="max-w-5xl w-full flex flex-col items-center justify-between my-20 relative">
+      <h2 class="title before:hidden contact-title">Contato</h2>
+
+      <ul class="contact-list z-10">
+        <li>
+          <a class="contact-item" href="mailto:brendongomes40@gmail.com" title="Email de Contato" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <p class="lead bold">E-mail</p>
+          <p class="lead">brendongomes40@gmail.com</p>
+        </li>
+        <li>
+          <a class="contact-item" href="https://www.linkedin.com/in/brendon-gomes-da-silva8" title="Perfil do Linkedin" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <p class="lead bold">Linkedin</p>
+          <p class="lead">Brendon Gomes</p>
+        </li>
+        <li>
+          <a class="contact-item" href="https://github.com/Brendon3578" title="Perfil do Github"target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <p class="lead bold">Github</p>
+          <p class="lead">Brendon3578</p>
+        </li>
+      </ul>
+
+      <img src="./img/bottom-image.png" alt=""
+        class="absolute w-80 -bottom-28 right-0"
+      >
     </section>
 
   </main>
@@ -389,11 +440,11 @@
       </p>
       <p>Desenvolvido com ☕ com TailwindCSS</p>
     </div>
-
   </footer>
 
   <!-- flowbite plugin -->
   <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
 
+  <script src="./script.js"></script>
 </body>
 </html>

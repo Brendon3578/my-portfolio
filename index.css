@@ -3,34 +3,32 @@
 @tailwind utilities;
 
 @layer components {
+  /* buttons */
+  .btn {
+    @apply px-3 py-1.5 rounded font-sans transition-colors duration-75;
+  }
   .btn-default {
-    @apply px-3 py-1.5 rounded bg-zinc-500 bg-opacity-5 border border-white border-opacity-10
-    font-sans text-sm text-zinc-300
-    hover:bg-opacity-20 transition-colors duration-75;
+    @apply px-3 py-1.5 rounded bg-white bg-opacity-5 text-zinc-300 ring-1 ring-zinc-700 ring-opacity-40 text-sm
+    hover:bg-opacity-10;
   }
-  .btn-primary {
-    @apply px-3 py-1.5 rounded bg-secondary-500 bg-gradient-to-t from-secondary-700 font-sans text-white shadow-lg
-    border border-secondary-600
-    hover:from-transparent transition-colors duration-75;
+  .btn-secondary-title {
+    @apply px-4 py-1.5 rounded bg-white bg-opacity-5 text-secondary-300 ring-1 ring-zinc-700 ring-opacity-40
+    hover:bg-opacity-10;
   }
 
-  .link:hover {
-    text-decoration: underline;
-  }
-
+  /* typography */
   .main-title {
-    @apply text-4xl md:text-5xl leading-normal font-bold;
+    @apply text-4xl sm:text-5xl md:text-6xl leading-snug font-bold antialiased;
     text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
   }
   .title {
-    @apply text-3xl font-bold mb-2;
+    @apply text-2xl sm:text-3xl font-bold mb-2 antialiased;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   .title::before {
     content: "";
     @apply block w-12 h-2 bg-primary-500 rounded-full mb-1;
   }
-
   .bold {
     @apply font-bold text-secondary-400 text-lg;
   }
@@ -38,48 +36,77 @@
     @apply text-zinc-400 font-sans;
   }
 
-  .text-shadow {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  }
-
+  /* badges and brands */
   .project-technology-badge {
-    @apply bg-gradient-to-t from-zinc-800 ring-1 ring-gray-500 ring-opacity-20 shadow-md
+    @apply bg-gradient-to-t from-zinc-800 ring-1 ring-zinc-400 ring-opacity-20 shadow-md
     px-1.5 rounded font-sans text-sm text-zinc-300;
   }
-
   .technology-brand {
     @apply text-4xl p-1 w-11 h-11 flex items-center justify-center
     rounded leading-none z-10 shadow-md
     hover:-translate-y-2 hover:z-20 transition-transform duration-150;
   }
+
+  /* list itens */
+  .contact-item {
+    @apply bg-gradient-to-t from-zinc-800/40 border border-gray-400/10 shadow;
+  }
+  .nav-item {
+    @apply text-zinc-200 transition bg-black bg-opacity-0
+    hover:text-zinc-100 hover:bg-opacity-25
+    sm:text-zinc-500;
+  }
 }
 
-.image-profile {
-  box-shadow: -40px -40px rgba(20, 184, 166, 0.5),
-    40px 40px rgba(244, 63, 94, 0.5);
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  .glassmorphism-5 {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  .glassmorphism-10 {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
 
-/* .title-secondary::before {
-  content: "";
-  @apply block w-12 h-2 bg-secondary-500 rounded-full mb-1;
-} */
+:root {
+  color-scheme: dark;
+}
 
+[id="home"] {
+  scroll-margin-top: 200px;
+}
+[id="technologies-knowledge"],
+[id="projects"],
+[id="contact"] {
+  scroll-margin-top: 80px;
+}
+
+/* Header */
+header nav li a {
+  @apply block py-2 px-4 text-lg antialiased transition
+  sm:text-base;
+}
+
+/* Technologies and Knowledge section  */
 .tab-buttons {
   @apply inline-flex absolute right-6;
 }
-
 .tab-buttons button {
-  @apply py-2 px-3 bg-white bg-opacity-5  border border-white border-opacity-5
+  @apply py-2 px-3 bg-white bg-opacity-5 border border-white border-opacity-5
   shadow-md cursor-pointer
   hover:bg-opacity-10;
 }
-
 .tab-buttons button:first-child.active {
-  @apply text-primary-500 border-primary-500 border-opacity-50;
-}
-
-.tab-buttons button:last-child.active {
   @apply text-secondary-500 border-secondary-500 border-opacity-50;
+}
+.tab-buttons button:last-child.active {
+  @apply text-primary-500 border-primary-500 border-opacity-50;
 }
 
 .technology-list {
@@ -87,30 +114,58 @@
 }
 
 .tooltip-technology {
-  @apply inline-block absolute invisible z-10 py-2 px-3 text-sm text-white bg-body rounded-lg shadow-sm opacity-0 tooltip
-  border border-white border-opacity-10 font-sans;
+  @apply inline-block absolute invisible z-10 py-2 px-3 tooltip
+  text-sm font-sans text-white bg-body rounded-lg shadow-sm opacity-0
+  border border-white border-opacity-10;
 }
 
 .knowledge-list {
-  @apply flex flex-col lg:flex-row gap-x-4 gap-y-8 justify-center items-start text-center;
+  @apply flex flex-col lg:flex-row gap-x-4 gap-y-8 justify-center items-start text-center mb-8;
 }
-
 .knowledge-list > section {
   @apply w-full lg:w-1/2;
 }
-
-.knowledge-list > section > p {
+.knowledge-list > section > h3 {
   @apply pb-1 mb-2 border-b border-opacity-20;
 }
-
 .knowledge-list li {
   @apply font-sans;
 }
 
+/* Projects section */
 .project-list > li {
-  @apply flex flex-col lg:flex-row gap-4 py-8;
+  @apply flex flex-col lg:flex-row gap-2 md:gap-4 p-4 rounded-lg
+  bg-zinc-500 bg-opacity-10 shadow;
 }
 
 .project-title {
   @apply flex flex-col gap-2 min-w-[210px];
+}
+
+/*  Contact section */
+.contact-title {
+  @apply text-5xl;
+}
+.contact-title::after {
+  content: "";
+  @apply block w-full h-2 rounded-full mt-1
+  bg-gradient-to-r from-primary-500 to-secondary-500;
+}
+
+.contact-list {
+  @apply mt-16 flex flex-col md:flex-row gap-10;
+}
+.contact-list li {
+  @apply flex flex-col items-center justify-evenly w-[150px] gap-1;
+}
+.contact-list li a {
+  @apply flex w-[100px] h-[100px] items-center justify-center
+  text-[44px] text-white rounded-full
+  hover:bg-opacity-10;
+}
+.contact-list li:nth-child(odd) a {
+  @apply hover:text-primary-500;
+}
+.contact-list li:nth-child(even) a {
+  @apply hover:text-secondary-500;
 }
